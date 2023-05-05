@@ -13,7 +13,7 @@ export async function makeRequest(limit, offset) {
   let config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0',
+    url: `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
     headers: {}
   };
 

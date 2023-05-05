@@ -7,16 +7,16 @@ import React from "react";
 
 
 function PokemonCard(props) {
-  const [name, setName] = React.useState(props.pokemon.name);
+  const [name] = React.useState(props.pokemon.name);
 
-  const handleInputChange = (event) => {
-    setName(event.target.value);
-  }  //обновляет значение переменной "name", чтобы соответствовать тому, что ввел пользователь.
+  // const handleInputChange = (event) => {
+  //   setName(event.target.value);
+  // }  //обновляет значение переменной "name", чтобы соответствовать тому, что ввел пользователь.
 
   return (
     <div>
       <h2>{name}</h2>
-      <input type="text" value={name} onChange={handleInputChange} />
+      
       <p>{props.pokemon.description}</p>
     </div>
   );
