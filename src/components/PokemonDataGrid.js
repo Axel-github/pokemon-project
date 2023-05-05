@@ -3,32 +3,27 @@
 import React, { useState, useEffect } from "react";
 import PokemonCard from "./card/PokemonCard";
 import { makeRequest } from "../api/request";
-
+import { pokemons_mock, pokemons_mock2 } from "../helpers/constants";
 function PokemonDataGrid() {
-  const bulba = {
-    name: '21312',
-    description: '1231',
-  }
-  const [pokemons, setPokemons] = useState([bulba]);
+  
+  const [pokemons, setPokemons] = useState(pokemons_mock);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = makeRequest(10, 0);
-        setPokemons(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchData();
+    const pokemons_from_api = makeRequest(10,0);
+    setPokemons(pokemons_from_api)
   }, []);
 
   return (
     <div>
-      {pokemons.map((pokemon) => (
-        <PokemonCard key={pokemon.name} pokemon={pokemon} />
-      ))}
+      
+      {
+        pokemons ? (
+       pokemons.map((pokemon) => (
+          <PokemonCard key={pokemon.name} pokemon={pokemon} />
+        ))
+        ) : (<p>pokemons нету((</p>)
+      
+      }
     </div>
   );
 }
