@@ -6,11 +6,11 @@ import { makeRequest } from "../api/request";
 import { pokemons_mock, pokemons_mock2 } from "../helpers/constants";
 function PokemonDataGrid() {
   
-  const [pokemons, setPokemons] = useState(pokemons_mock);
+  const [pokemons, setPokemons] = useState();
 
   useEffect(() => {
-    const pokemons_from_api = makeRequest(10,0);
-    setPokemons(pokemons_from_api)
+    makeRequest(10,0).then(response => {setPokemons(response.data.results)})
+    // setPokemons(pokemons_from_api)
   }, []);
 
   return (
@@ -18,8 +18,8 @@ function PokemonDataGrid() {
       
       {
         pokemons ? (
-       pokemons.map((pokemon) => (
-          <PokemonCard key={pokemon.name} pokemon={pokemon} />
+          pokemons.map((pokemon) => (
+            <PokemonCard key={pokemon.name} pokemon={pokemon} />
         ))
         ) : (<p>pokemons нету((</p>)
       
