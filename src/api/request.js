@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 
-function makeRequest(limit, offset) {
+export function makeRequest(limit, offset) {
   const params = {
     limit,
     offset
@@ -18,6 +18,5 @@ function makeRequest(limit, offset) {
       // обработка ошибки
     });
 }
-
+ 
 // Пример использования: 
-// makeRequest(10, 20);
