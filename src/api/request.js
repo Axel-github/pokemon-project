@@ -20,3 +20,4 @@ export function makeRequest(limit, offset) {
 }
  
 // Пример использования: 
+makeRequest(10,10);
