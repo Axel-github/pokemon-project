@@ -1,7 +1,7 @@
 import React from "react";
 //import PokemonCard from "./components/card/PokemonCard";
 import PokemonDataGrid from "./components/PokemonDataGrid";
-
+//import ChangeBG from "./components/BgColor"
 import Layout from "./components/layout/Layout";
 import MyHeader from "./components/myHeader";
 
@@ -16,6 +16,7 @@ function App() {
     <Layout>
       <MyHeader />
       <PokemonDataGrid />
+
 
     </Layout>
   );

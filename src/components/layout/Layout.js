@@ -1,8 +1,20 @@
-import React from 'react';
-
+import React, { useState } from "react";
+import "./layout.css";
 function Layout(props) {
+
+
+  const [bgColor, setBgColor] = useState("#00bfff "); // начальный цвет фона
+
+  const changeBgColor = () => {
+    // генерируем случайный цвет в формате HEX
+    const newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    setBgColor(newColor); // устанавливаем новый цвет фона
+  };
+
+
   return (
-    <div className="layout">
+    <div className="layout" style={{ backgroundColor: bgColor }}>
+      <button onClick={changeBgColor}>Сменить фон</button>
       {props.children}
     </div>
   );
