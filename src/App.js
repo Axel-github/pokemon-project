@@ -7,15 +7,15 @@ import MyHeader from "./components/myHeader";
 
 function App() {
   //("Bulbasaur", "A strange seed was planted on its back at birth.");
-  
 
- 
+
+
 
 
   return (
     <Layout>
       <MyHeader />
-      <PokemonDataGrid/>
+      <PokemonDataGrid />
 
     </Layout>
   );
