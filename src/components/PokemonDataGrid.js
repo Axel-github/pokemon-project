@@ -16,9 +16,9 @@ const PokemonDataGrid = () => {
 
 
   return (
-    <div>
+    <div className="pokemon_data_grid_main row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 d-flex flex-wrap">
       {pokemonData.map((pokemon) => (
-        <PokemonCard key={pokemon.name} pokemon={pokemon} />
+        <PokemonCard card mb-3 key={pokemon.name} pokemon={pokemon} />
       ))}
     </div>
   );
