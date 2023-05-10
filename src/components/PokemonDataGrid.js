@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import PokemonCard from "./card/PokemonCard";
-import { makeRequest } from "../api/request";
+import { getPokemonList } from "../api/getPokemonList";
 //import { pokemons_mock, pokemons_mock2 } from "../helpers/constants";
 
 // function PokemonDataGrid() {
@@ -10,7 +10,7 @@ const PokemonDataGrid = () => {
   const [pokemonData, setPokemonData] = useState([]);
 
   useEffect(() => {
-    makeRequest(10, 0).then(response => { setPokemonData(response.data.results) })
+    getPokemonList(10, 0).then(response => { setPokemonData(response.data.results) })
   }, []);
 
 

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 
-export async function makeRequest(limit, offset) {
+export async function getPokemonList(limit, offset) {
   // const params = {
   //   limit,
   //   offset
