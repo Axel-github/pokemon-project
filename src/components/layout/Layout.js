@@ -16,7 +16,7 @@ function Layout(props) {
 
   return (
     <div className="layout" style={{ backgroundColor: bgColor }}>
-      <button className="btn layout_change_background_button" onClick={changeBgColor}>Сменить фон</button>
+      {/* <button className="btn layout_change_background_button" onClick={changeBgColor}>Сменить фон</button> */}
       {props.children}
     </div>
   );

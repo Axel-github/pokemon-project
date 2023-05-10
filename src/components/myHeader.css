@@ -2,8 +2,11 @@
     width: 150px;
     height: 150px;
     margin-left: -35px;
+
 }
 
-#body {
-    background-color: #00bfff;
+#logo:hover {
+
+    cursor: pointer;
+
 }
