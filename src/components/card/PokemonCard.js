@@ -25,10 +25,8 @@ function PokemonCard(props) {
 
 
     <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{name}</h5>
-        <img src={url} />
-      </div>
+      <h5 class="card-title">{name}</h5>
+      <img className="pokemon-card-image" src={url} />
     </div>
   );
 }
