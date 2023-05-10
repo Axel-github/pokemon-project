@@ -1,0 +1,14 @@
+#logo {
+    /*mirror*/
+    transform: scaleX(-1);
+    width: 150px;
+    height: 150px;
+    margin-left: -35px;
+
+}
+
+#logo:hover {
+
+    cursor: pointer;
+
+}

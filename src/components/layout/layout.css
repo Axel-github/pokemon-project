@@ -1,0 +1,8 @@
+.layout {
+    height: 100%;
+    width: 100%;
+}
+
+.layout_change_background_button {
+    background-color: rgb(252, 131, 216);
+}

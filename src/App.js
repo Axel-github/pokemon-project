@@ -1,21 +1,22 @@
 import React from "react";
-import PokemonCard from "./components/card/PokemonCard";
+//import PokemonCard from "./components/card/PokemonCard";
 import PokemonDataGrid from "./components/PokemonDataGrid";
-import { Pokemon } from "./models/Pokemon";
+//import ChangeBG from "./components/BgColor"
 import Layout from "./components/layout/Layout";
+import MyHeader from "./components/myHeader";
 
 function App() {
-  const bulba = new Pokemon("Bulbasaur", "A strange seed was planted on its back at birth.");
-  const pikachu = new Pokemon("Pikachu", "Электрическая мышь")
+  //("Bulbasaur", "A strange seed was planted on its back at birth.");
 
-  const pokemons = [bulba, pikachu, pikachu, pikachu, pikachu]
+
 
 
 
   return (
     <Layout>
+      <MyHeader />
+      <PokemonDataGrid />
 
-      <PokemonDataGrid pokemons={pokemons} />
 
     </Layout>
   );
@@ -24,9 +25,17 @@ export default App;
 
 
 // todo layout компонент, в который встраиваются др компоненты +
-// API папка, файл с запросом для импорта ++
+// API папка, файл с запросом для импорта +
 // Axios для запросов +
 // компоненты по папкам +
-// Header 
-// src папка -> images; icons 
+// Header (название)+
+// src папка -> images; icons +
+
+
+
+
+
+
+
+
 // модалка: через порталы  
