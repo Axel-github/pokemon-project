@@ -6,7 +6,7 @@ import "./card.css";
 
 function PokemonCard(props) {
   const [name] = React.useState(props.pokemon.name);
-
+  const [url] = React.useState("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png");
   return (
     // <div className="card">
     //   <h2>{name}</h2>
@@ -17,7 +17,7 @@ function PokemonCard(props) {
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">{name}</h5>
-        <a class="btn btn-primary">Go somewhere</a>
+        <img src={url} />
       </div>
     </div>
   );
