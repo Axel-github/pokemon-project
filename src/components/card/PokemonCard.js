@@ -8,7 +8,7 @@ import { getPokemonInfo } from "../../api/getPokemonInfo";
 function PokemonCard(props) {
 
   const [name] = useState(props.pokemon.name);
-  const [url, setUrl] = useState("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png");
+  const [url, setUrl] = useState("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png");
 
 
 

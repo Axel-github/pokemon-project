@@ -25,20 +25,11 @@ const MyHeader = () => {
         <nav>
           <ul className="nav-list">
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Главная
+              <a className="nav-link" href="https://vk.com/just_axel">
+                Мой ВК
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/about">
-                О нас
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/contact">
-                Контакты
-              </a>
-            </li>
+
           </ul>
         </nav>
 
