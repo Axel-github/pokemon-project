@@ -1,13 +1,16 @@
 /* Основные стили карточки покемона */
+
+
+
 .card {
     width: 100px;
     height: 100px;
+
 }
 
-.pokemon-card-image {
-    border: 2px solid black;
-}
+/* .pokemon-card-image {} */
 
 .card .card-title {
     text-align: center;
+    margin-top: -10px;
 }

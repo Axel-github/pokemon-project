@@ -1,0 +1,6 @@
+.pokemon-data-grid {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+}

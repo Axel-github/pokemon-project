@@ -1,0 +1,57 @@
+#logo {
+    /*mirror*/
+    transform: scaleX(-1);
+    width: 100px;
+    height: 100px;
+    margin-left: -25px;
+
+}
+
+#logo:hover {
+
+    cursor: pointer;
+
+}
+
+.wrapper {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+
+    display: flex;
+    /* создаем контейнер для логотипа и меню навигации в одной строке */
+    justify-content: space-between;
+    /* равномерно распределяет пространство между логотипом и меню навигации */
+    align-items: center;
+    /* выравнивает элементы по вертикали */
+    background-color: #0099ff;
+    /* задаем цвет для фона шапки */
+    width: 100%;
+}
+
+
+
+.nav-list {
+    list-style: none;
+    /* убираем маркеры у списка навигации */
+    display: flex;
+    /*позволяет разместить элементы списка в одну строку */
+    justify-content: flex-end;
+    /*задаем выравнивание элементов меню навигации вправо*/
+    align-items: center;
+    /* выравнивание элементов по вертикали */
+    padding: 0 20px;
+}
+
+.nav-item {
+    margin-left: 20px;
+    /* добавляем небольшой отступ для каждого элемента списка */
+}
+
+.nav-link {
+    color: white;
+    /* задаем цвет текста ссылок */
+    text-decoration: none;
+    /* убираем подчеркивание с текста ссылок */
+    font-size: 18px;
+    /* задаем размер шрифта для текста ссылок */
+}

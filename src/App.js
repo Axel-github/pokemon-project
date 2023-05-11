@@ -1,9 +1,9 @@
 import React from "react";
 //import PokemonCard from "./components/card/PokemonCard";
-import PokemonDataGrid from "./components/PokemonDataGrid";
+import PokemonDataGrid from "./components/PokemonDataGrid/PokemonDataGrid";
 //import ChangeBG from "./components/BgColor"
 import Layout from "./components/layout/Layout";
-import MyHeader from "./components/myHeader";
+import MyHeader from "./components/myHeader/myHeader";
 
 function App() {
   //("Bulbasaur", "A strange seed was planted on its back at birth.");
