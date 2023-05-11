@@ -25,7 +25,7 @@ const MyHeader = () => {
         <nav>
           <ul className="nav-list">
             <li className="nav-item">
-              <a className="nav-link" href="https://vk.com/just_axel">
+              <a className="nav-link" href="https://vk.com/just_axel" target="_blank">
                 Мой ВК
               </a>
             </li>
@@ -36,7 +36,7 @@ const MyHeader = () => {
 
       </div>
 
-    </div>
+    </div >
   );
 };
 
