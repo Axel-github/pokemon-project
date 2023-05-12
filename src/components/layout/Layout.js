@@ -6,7 +6,7 @@ import "./layout.css";
 function Layout(props) {
 
 
-  const [bgColor, setBgColor] = useState("#00bfff "); // начальный цвет фона
+  const [bgColor, setBgColor] = useState("#00bfff"); // начальный цвет фона
 
   const changeBgColor = () => {
     // генерируем случайный цвет в формате HEX
