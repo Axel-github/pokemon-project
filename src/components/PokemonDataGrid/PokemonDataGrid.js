@@ -11,7 +11,7 @@ const PokemonDataGrid = () => {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-    getPokemonList(50, 0).then(response => { setPokemons(response.data.results) })
+    getPokemonList(250, 0).then(pokemons => { setPokemons(pokemons) })
   }, []);
 
 

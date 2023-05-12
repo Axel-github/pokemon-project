@@ -17,15 +17,16 @@ export async function getPokemonList(limit, offset) {
     headers: {}
   };
 
-  // axios.request(config)
-  //   .then((response) => {
-  //     console.log(response.data.results);
-  //     return response.data.results;
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //     return [];
-  //   }).finally(() => [])
-  return await axios.request(config);
+  let response = await axios.request(config);
+  const pokemons = response.data.results;
+
+  for (let i = 0; i < pokemons.length; i++) {
+    const slices = pokemons[i].url.split("/");
+    const id = slices[slices.length - 2];
+    pokemons[i].spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+  }
+
+
+  return pokemons;
 
 }
