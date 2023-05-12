@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import getPokemonSprite from '../helpers/getPokemonSprite'
 
 
 export async function getPokemonList(limit, offset) {
@@ -24,7 +24,7 @@ export async function getPokemonList(limit, offset) {
     const slices = pokemons[i].url.split("/");
     const id = slices[slices.length - 2];
     // pokemons[i].spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
-    pokemons[i].spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`
+    pokemons[i].spriteUrl = getPokemonSprite(id, 'animated');
   }
 
 
