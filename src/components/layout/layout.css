@@ -6,3 +6,41 @@
 .layout_change_background_button {
     background-color: rgb(252, 131, 216);
 }
+
+
+.layout-header {
+    height: 100px;
+    width: 100%;
+    background-color: brown;
+}
+
+.layout-main {
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+}
+
+.layout-footer {
+    height: 40px;
+    background-color: darkgreen;
+}
+
+.layout-sidebar {
+
+    height: auto;
+    width: 200px;
+    min-width: 200px;
+    background-color: aquamarine;
+}
+
+
+
+.layout-datagrid {
+    height: auto;
+    width: 100%;
+    background-color: blue;
+
+}

@@ -14,9 +14,15 @@ function App() {
 
   return (
     <Layout>
-      <MyHeader />
-      <PokemonDataGrid />
+      <MyHeader className="layout-header" />
 
+      <div className="layout-main">
+        <div className="layout-sidebar"></div>
+        <PokemonDataGrid className="layout-datagrid" />
+        <div className="layout-sidebar"></div>
+      </div>
+
+      <div className="layout-footer"> FOOTER </div>
 
     </Layout>
   );
@@ -24,12 +30,7 @@ function App() {
 export default App;
 
 
-// todo layout компонент, в который встраиваются др компоненты +
-// API папка, файл с запросом для импорта +
-// Axios для запросов +
-// компоненты по папкам +
-// Header (название)+
-// src папка -> images; icons +
+
 
 
 
