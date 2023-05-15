@@ -26,7 +26,9 @@ const MyHeader = () => {
               <a className="nav-link" rel="noreferrer" href="https://vk.com/just_axel" target="_blank">
                 Мой ВК
               </a>
+
             </li>
+
           </ul>
         </nav>
       </div>

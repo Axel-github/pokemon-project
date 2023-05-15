@@ -1,6 +1,11 @@
 .layout {
-    height: 100%;
+    height: auto;
     width: 100%;
+    background-image: url('../../images/sidebar.jpg');
+    background-attachment: fixed;
+    /* добавлено новое свойство */
+
+    background-size: 50%;
 }
 
 .layout_change_background_button {
@@ -21,17 +26,13 @@
     display: flex;
     flex-direction: row;
 
-    background-image: url('../../images/sidebar.jpg');
-    background-attachment: fixed;
-    /* добавлено новое свойство */
 
-    background-size: 50%;
 }
 
 
 .layout-footer {
     height: 40px;
-    background-color: darkgreen;
+    
 }
 
 
