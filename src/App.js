@@ -18,9 +18,9 @@ function App() {
       <MyHeader className="layout-header" />
 
       <div className="layout-main">
-        <Sidebar className="layout-sidebar left" />
+        <Sidebar className="left" />
         <PokemonDataGrid className="layout-datagrid" />
-        <Sidebar className="layout-sidebar right" />
+        <Sidebar className="right" />
       </div>
 
       <div className="layout-footer"> FOOTER </div>
