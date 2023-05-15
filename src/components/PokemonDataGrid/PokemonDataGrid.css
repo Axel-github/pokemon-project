@@ -1,12 +1,13 @@
 .pokemon-data-grid {
     display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
     flex-wrap: wrap;
+    align-items: center;
+    /* центрируем элементы по вертикали */
+    justify-content: center;
+    /* центрируем элементы по горизонтали */
     gap: 30px;
     padding: 20px;
     background-color: #EEF7DD;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4),
-        0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 20px 40px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
 }
