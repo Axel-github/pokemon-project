@@ -4,4 +4,9 @@
     align-content: flex-start;
     flex-wrap: wrap;
     gap: 30px;
+    padding: 20px;
+    background-color: #EEF7DD;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4),
+        0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
 }

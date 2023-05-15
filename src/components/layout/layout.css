@@ -18,10 +18,16 @@
     height: auto;
     min-height: 100%;
     width: 100%;
-    background-color: burlywood;
     display: flex;
     flex-direction: row;
+
+    background-image: url('../../images/sidebar.svg');
+    background-attachment: fixed;
+    /* добавлено новое свойство */
+
+    background-size: 50%;
 }
+
 
 .layout-footer {
     height: 40px;

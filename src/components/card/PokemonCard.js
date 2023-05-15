@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./card.css";
-import { getPokemonInfo } from "../../api/getPokemonInfo";
+//import { getPokemonInfo } from "../../api/getPokemonInfo";
 
 
 function PokemonCard(props) {
