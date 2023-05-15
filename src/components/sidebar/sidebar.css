@@ -1,0 +1,29 @@
+.layout-sidebar1 {
+
+  top: 0;
+  bottom: 0;
+  width: 200px;
+}
+
+.left1 {
+  left: 0;
+  background-image: url('../../images/sidebar.png');
+  /* Установим background-position, чтобы изображение было выровнено по левому краю */
+  background-position: left top;
+}
+
+.right1 {
+  right: 0;
+  background-image: url('../../images/sidebar.png');
+  /* Установим background-position, чтобы изображение было выровнено по правому краю */
+  background-position: right top;
+}
+
+.layout-sidebar1 img {
+  display: block;
+  max-width: none;
+  /* установить максимальную ширину равной размеру изображения */
+  width: 100%;
+  /* установить ширину 100%, чтобы изображение растянулось на всю ширину контейнера */
+  height: auto;
+}
