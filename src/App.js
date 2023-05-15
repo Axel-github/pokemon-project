@@ -4,6 +4,7 @@ import PokemonDataGrid from "./components/PokemonDataGrid/PokemonDataGrid";
 //import ChangeBG from "./components/BgColor"
 import Layout from "./components/layout/Layout";
 import MyHeader from "./components/myHeader/myHeader";
+import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   //("Bulbasaur", "A strange seed was planted on its back at birth.");
@@ -17,9 +18,9 @@ function App() {
       <MyHeader className="layout-header" />
 
       <div className="layout-main">
-        <div className="layout-sidebar"></div>
+        <Sidebar className="layout-sidebar left" />
         <PokemonDataGrid className="layout-datagrid" />
-        <div className="layout-sidebar"></div>
+        <Sidebar className="layout-sidebar right" />
       </div>
 
       <div className="layout-footer"> FOOTER </div>

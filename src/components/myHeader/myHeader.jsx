@@ -16,8 +16,6 @@ const MyHeader = () => {
   return (
     <div className="myHeader">
       <div className="wrapper">
-
-
         <div className="logo">
           <img id="logo" src={logo} onClick={changeBgColor} alt="logo" />
 
@@ -29,13 +27,9 @@ const MyHeader = () => {
                 Мой ВК
               </a>
             </li>
-
           </ul>
         </nav>
-
-
       </div>
-
     </div >
   );
 };
