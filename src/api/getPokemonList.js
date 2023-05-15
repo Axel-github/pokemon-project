@@ -3,11 +3,6 @@ import getPokemonSprite from '../helpers/getPokemonSprite'
 
 
 export async function getPokemonList(limit, offset) {
-  // const params = {
-  //   limit,
-  //   offset
-  // }
-
 
 
   let config = {

@@ -3,9 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* центрируем элементы по вертикали */
     justify-content: center;
-    /* центрируем элементы по горизонтали */
     gap: 30px;
     padding: 20px;
     background-color: #EEF7DD;

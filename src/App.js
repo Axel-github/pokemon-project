@@ -1,17 +1,11 @@
 import React from "react";
-//import PokemonCard from "./components/card/PokemonCard";
 import PokemonDataGrid from "./components/PokemonDataGrid/PokemonDataGrid";
-//import ChangeBG from "./components/BgColor"
 import Layout from "./components/layout/Layout";
 import MyHeader from "./components/myHeader/myHeader";
 import Sidebar from "./components/sidebar/sidebar";
+import Footer from "./components/footer/footer";
 
 function App() {
-  //("Bulbasaur", "A strange seed was planted on its back at birth.");
-
-
-
-
 
   return (
     <Layout>
@@ -23,7 +17,7 @@ function App() {
         <Sidebar className="right" />
       </div>
 
-      <div className="layout-footer"> FOOTER </div>
+      <Footer className="layout-footer" />
 
     </Layout>
   );
@@ -40,4 +34,4 @@ export default App;
 
 
 
-// модалка: через порталы  
+// todo: cache API

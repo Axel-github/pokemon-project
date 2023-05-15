@@ -1,41 +1,19 @@
-/* .layout-sidebar {
-
-  top: 0;
-  bottom: 0;
-  width: 200px;
-} */
-
 .layout-sidebar {
 
   height: auto;
   width: auto;
   min-width: 200px;
-  /* background-image: url('../../images/sidebar.svg');
-  background-color: aquamarine;
-  background-repeat: repeat-y;
-  background-size: 300%; */
 
 }
 
 .left1 {
   left: 0;
   background-image: url('../../images/sidebar.jpg');
-  /* Установим background-position, чтобы изображение было выровнено по левому краю */
   background-position: left top;
 }
 
 .right1 {
   right: 0;
   background-image: url('../../images/sidebar.jpg');
-  /* Установим background-position, чтобы изображение было выровнено по правому краю */
   background-position: right top;
 }
-
-/* .layout-sidebar img {
-
-
-  max-width: none;
-  width: 100%;
-  height: auto;
-  background-repeat: repeat-y;
-} */

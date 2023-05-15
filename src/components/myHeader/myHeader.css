@@ -15,10 +15,6 @@
 
 .wrapper {
 
-    /* background-image: url("C:\Users\79289\Desktop\Pokemon\pokemon-project\src\components\myHeader\texture.jpg"); */
-
-    /* background: linear-gradient(to bottom, #55BD57 10%, #55BD57 20%); */
-
     display: flex;
     /* создаем контейнер для логотипа и меню навигации в одной строке */
     justify-content: space-between;

@@ -3,21 +3,11 @@
     width: 100%;
     background-image: url('../../images/sidebar.jpg');
     background-attachment: fixed;
-    /* добавлено новое свойство */
-
     background-size: 50%;
 }
 
-.layout_change_background_button {
-    background-color: rgb(252, 131, 216);
-}
 
 
-.layout-header {
-    height: 100px;
-    width: 100%;
-    background-color: brown;
-}
 
 .layout-main {
     height: auto;
@@ -28,15 +18,6 @@
 
 
 }
-
-
-.layout-footer {
-    height: 40px;
-    
-}
-
-
-
 
 
 .layout-datagrid {
