@@ -16,8 +16,6 @@ const MyHeader = () => {
   return (
     <div className="myHeader">
       <div className="wrapper">
-
-
         <div className="logo">
           <img id="logo" src={logo} onClick={changeBgColor} alt="logo" />
 
@@ -25,17 +23,13 @@ const MyHeader = () => {
         <nav>
           <ul className="nav-list">
             <li className="nav-item">
-              <a className="nav-link" href="https://vk.com/just_axel" target="_blank">
+              <a className="nav-link" rel="noreferrer" href="https://vk.com/just_axel" target="_blank">
                 Мой ВК
               </a>
             </li>
-
           </ul>
         </nav>
-
-
       </div>
-
     </div >
   );
 };

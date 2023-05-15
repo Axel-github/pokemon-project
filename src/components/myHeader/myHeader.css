@@ -16,8 +16,10 @@
 .wrapper {
 
     /* background-image: url("C:\Users\79289\Desktop\Pokemon\pokemon-project\src\components\myHeader\texture.jpg"); */
-    background: linear-gradient(to bottom, #010f36, #00bfff);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    background: linear-gradient(to bottom, #55BD57 10%, #55BD57 20%, #EEF7DD);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+
 
     display: flex;
     /* создаем контейнер для логотипа и меню навигации в одной строке */
@@ -25,7 +27,7 @@
     /* равномерно распределяет пространство между логотипом и меню навигации */
     align-items: center;
     /* выравнивает элементы по вертикали */
-    background-color: #0099ff;
+    background-color: #5E526C;
     /* задаем цвет для фона шапки */
     width: 100%;
 }

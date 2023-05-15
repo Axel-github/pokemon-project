@@ -4,6 +4,7 @@ import PokemonDataGrid from "./components/PokemonDataGrid/PokemonDataGrid";
 //import ChangeBG from "./components/BgColor"
 import Layout from "./components/layout/Layout";
 import MyHeader from "./components/myHeader/myHeader";
+import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   //("Bulbasaur", "A strange seed was planted on its back at birth.");
@@ -14,9 +15,15 @@ function App() {
 
   return (
     <Layout>
-      <MyHeader />
-      <PokemonDataGrid />
+      <MyHeader className="layout-header" />
 
+      <div className="layout-main">
+        <Sidebar className="left" />
+        <PokemonDataGrid className="layout-datagrid" />
+        <Sidebar className="right" />
+      </div>
+
+      <div className="layout-footer"> FOOTER </div>
 
     </Layout>
   );
@@ -24,12 +31,7 @@ function App() {
 export default App;
 
 
-// todo layout компонент, в который встраиваются др компоненты +
-// API папка, файл с запросом для импорта +
-// Axios для запросов +
-// компоненты по папкам +
-// Header (название)+
-// src папка -> images; icons +
+
 
 
 
