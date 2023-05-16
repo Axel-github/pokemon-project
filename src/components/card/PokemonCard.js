@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./card.css";
-import Modal from '../modal/modal';
+
 
 const PokemonCard = ({ pokemon, setPokemon, setOpen }) => {
 
@@ -15,7 +15,7 @@ const PokemonCard = ({ pokemon, setPokemon, setOpen }) => {
   };
 
   return (
-    <>
+    
       <div className="card" onClick={() => handleCloseModal()}>
         <div className="card-body">
           <img className="card-body-image" src={spriteUrl} alt='pokemon' />
@@ -24,7 +24,7 @@ const PokemonCard = ({ pokemon, setPokemon, setOpen }) => {
           <span className="card-footer-title">{name}</span>
         </div>
       </div>
-    </>
+    
   );
 }
 

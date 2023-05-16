@@ -1,23 +1,26 @@
 import React from "react";
 import ReactModal from 'react-modal';
 import getPokemonSprite from "../../helpers/getPokemonSprite";
-
-//import { getPokemonList } from "../../api/getPokemonList";
+import "./modal.css"
 
 const Modal = ({ isOpen, handleCloseModal, pokemon }) => {
-  //const test = useState('test');
-
   return (
-
-    <ReactModal isOpen={isOpen} onRequestClose={handleCloseModal} contentLabel="Модальное окно" appElement={document.querySelector('#root')}>
-      <h3>{pokemon?.name ?? 'Pokemon name not available'}</h3>
-      <h3>{pokemon?.id ?? 'Pokemon ID not available'}</h3>
-      <img className="modal-body-image" src={getPokemonSprite(pokemon?.id, 'svg')} alt='pokemon' />
-      <h3>{console.log('test')}</h3>
-      <h3>{pokemon?.weight}</h3>
-      {/* {children} */}
-      <button onClick={() => handleCloseModal(false)}>Закрыть</button>
-
+    <ReactModal isOpen={isOpen} onRequestClose={handleCloseModal} contentLabel="Модальное окно" appElement={document.querySelector('#root')} overlayClassName="root">
+      <div className="modal">
+        <div className="modal-card">
+          <div className="modal-header">
+            <h3>{pokemon?.name ? pokemon.name : 'Pokemon name not available'}</h3>
+          </div>
+          <div className="modal-body">
+            <img className="modal-image" src={getPokemonSprite(pokemon?.id, 'svg')} alt='pokemon' />
+            <h3>ID:{pokemon?.id ? pokemon.id : 'Pokemon ID not available'}</h3>
+            <h3>Weight:{pokemon?.weight}</h3>
+          </div>
+          <div className="modal-footer">
+            <button onClick={() => handleCloseModal(false)}>Закрыть</button>
+          </div>
+        </div>
+      </div>
     </ReactModal>
   );
 };
