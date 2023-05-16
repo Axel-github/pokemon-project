@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import "./card.css";
 import Modal from '../modal/modal';
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, setPokemon, setOpen }) => {
 
   const [name] = useState(pokemon.name);
   //const [weight] = useState(pokemon.weight);
   const [spriteUrl] = useState(pokemon.spriteUrl);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   const handleCloseModal = () => {
-    setIsOpen(false);
+    setOpen(true);
+    setPokemon(pokemon);
   };
 
   return (
     <>
-      <div className="card" onClick={() => setIsOpen(true)}>
+      <div className="card" onClick={() => handleCloseModal()}>
         <div className="card-body">
           <img className="card-body-image" src={spriteUrl} alt='pokemon' />
         </div>
@@ -23,9 +24,6 @@ const PokemonCard = ({ pokemon }) => {
           <span className="card-footer-title">{name}</span>
         </div>
       </div>
-      <Modal pokemon={pokemon} isOpen={isOpen} handleCloseModal={handleCloseModal} >
-
-      </Modal>
     </>
   );
 }

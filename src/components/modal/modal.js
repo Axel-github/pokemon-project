@@ -16,7 +16,7 @@ const Modal = ({ isOpen, handleCloseModal, pokemon }) => {
       <h3>{console.log('test')}</h3>
       <h3>{pokemon?.weight}</h3>
       {/* {children} */}
-      <button onClick={handleCloseModal}>Закрыть</button>
+      <button onClick={() => handleCloseModal(false)}>Закрыть</button>
 
     </ReactModal>
   );

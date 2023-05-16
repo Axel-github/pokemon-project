@@ -4,10 +4,14 @@ import PokemonCard from "../card/PokemonCard";
 import "./PokemonDataGrid.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { getPokemons } from "../../api/getPokemons";
+import Modal from '../modal/modal';
 
 const PokemonDataGrid = () => {
   const [pokemons, setPokemons] = useState([]);
   const [hasMore, setHasMore] = useState(true);
+
+  const [open, setOpen] = useState(false);
+  const [pokemon, setPokemon] = useState({});
 
   useEffect(() => {
     getPokemons(120, 0).then((pokemons) => {
@@ -36,7 +40,7 @@ const PokemonDataGrid = () => {
   // const getPokemonIdFromUrl = (url) => {
   //   const urlParts = url.split("/");
   //   return urlParts[urlParts.length - 2];
-  // };
+  // }; +Сделать через портал 
 
   return (
     <div >
@@ -47,9 +51,12 @@ const PokemonDataGrid = () => {
         loader={<h4>Loading...</h4>}
       >
         {pokemons.map((pokemon) => (
-          <PokemonCard key={pokemon.name} pokemon={pokemon} className="сard" />
+          <PokemonCard setOpen={setOpen} setPokemon={setPokemon} key={pokemon.name} pokemon={pokemon} className="сard" />
         ))}
       </InfiniteScroll>
+
+      {open &&
+        <Modal pokemon={pokemon} isOpen={open} handleCloseModal={setOpen} />}
     </div>
   );
 };
