@@ -5,7 +5,7 @@ import Modal from '../modal/modal';
 const PokemonCard = ({ pokemon }) => {
 
   const [name] = useState(pokemon.name);
-  const [weight] = useState(pokemon.weight);
+  //const [weight] = useState(pokemon.weight);
   const [spriteUrl] = useState(pokemon.spriteUrl);
   const [isOpen, setIsOpen] = useState(false);
 
