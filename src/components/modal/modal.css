@@ -15,7 +15,7 @@
 
 .modal {
   position: relative;
-  background-color: white;
+  background-color: #BEE37E;
   border-radius: 10px;
   padding: 20px;
   width: 600px;
@@ -38,6 +38,7 @@
 }
 
 .modal-header {
+  background-color: #D18344;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,6 +68,7 @@ h3 {
 }
 
 .modal-footer {
+  background-color: #D18344;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -93,4 +95,25 @@ button {
 
 button:hover {
   background-color: #dddddd;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+
+} 
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }

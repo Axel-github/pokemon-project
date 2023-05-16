@@ -5,7 +5,13 @@ import "./modal.css"
 
 const Modal = ({ isOpen, handleCloseModal, pokemon }) => {
   return (
-    <ReactModal isOpen={isOpen} onRequestClose={handleCloseModal} contentLabel="Модальное окно" appElement={document.querySelector('#root')} overlayClassName="root">
+    <ReactModal isOpen={isOpen} onRequestClose={handleCloseModal} contentLabel="Модальное окно" appElement={document.querySelector('#root')} 
+    className={{
+      overlay: 'modal-overlay',
+      content: 'modal-content'
+    }}
+    overlayClassName="modal-overlay" // добавьте эту строку
+    >
       <div className="modal">
         <div className="modal-card">
           <div className="modal-header">
