@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 import PokemonCard from "../card/PokemonCard";
-import { getPokemonList } from "../../api/getPokemonList";
+//import { getPokemonList } from "../../api/getPokemonList";
 import "./PokemonDataGrid.css";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { getPokemons } from "../../api/getPokemons";
 
 const PokemonDataGrid = () => {
   const [pokemons, setPokemons] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
-    getPokemonList(120, 0).then((pokemons) => {
-      setPokemons(pokemons);
+    getPokemons(120, 0).then((pokemons) => {
+      const updatedPokemons = pokemons.map((pokemon) => ({
+        ...pokemon
+      }));
+      setPokemons(updatedPokemons);
     });
   }, []);
 
@@ -20,10 +24,19 @@ const PokemonDataGrid = () => {
       return;
     }
 
-    getPokemonList(20, pokemons.length).then((newPokemons) => {
-      setPokemons([...pokemons, ...newPokemons]);
+    getPokemons(20, pokemons.length).then((newPokemons) => {
+      const updatedNewPokemons = newPokemons.map((pokemon) => ({
+        ...pokemon
+      }));
+      setPokemons([...pokemons, ...updatedNewPokemons]);
     });
   };
+
+  // // Функция для получения id покемона из url
+  // const getPokemonIdFromUrl = (url) => {
+  //   const urlParts = url.split("/");
+  //   return urlParts[urlParts.length - 2];
+  // };
 
   return (
     <div >
