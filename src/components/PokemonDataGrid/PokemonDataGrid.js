@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import PokemonCard from "../card/PokemonCard";
-//import { getPokemonList } from "../../api/getPokemonList";
 import "./PokemonDataGrid.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { getPokemons } from "../../api/getPokemons";
@@ -36,27 +35,40 @@ const PokemonDataGrid = () => {
     });
   };
 
-  // // Функция для получения id покемона из url
-  // const getPokemonIdFromUrl = (url) => {
-  //   const urlParts = url.split("/");
-  //   return urlParts[urlParts.length - 2];
-  // }; +Сделать через портал 
-
   return (
-    <div >
-      <InfiniteScroll className="pokemon-data-grid"
+    <div>
+      <InfiniteScroll
+        className="pokemon-data-grid"
         dataLength={pokemons.length}
         next={fetchMoreData}
         hasMore={hasMore}
-        loader={<h4>Loading...</h4>}
+        loader={
+          <div className="loader" key={0}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        }
       >
         {pokemons.map((pokemon) => (
-          <PokemonCard setOpen={setOpen} setPokemon={setPokemon} key={pokemon.name} pokemon={pokemon} className="сard" />
+          <PokemonCard
+            setOpen={setOpen}
+            setPokemon={setPokemon}
+            key={pokemon.name}
+            pokemon={pokemon}
+            className="сard"
+          />
         ))}
       </InfiniteScroll>
 
-      {open &&
-        <Modal pokemon={pokemon} isOpen={open} handleCloseModal={setOpen} />}
+      {open && (
+        <Modal
+          pokemon={pokemon}
+          isOpen={open}
+          handleCloseModal={setOpen}
+        />
+      )}
     </div>
   );
 };
