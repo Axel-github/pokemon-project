@@ -3,6 +3,7 @@ import PokemonDataGrid from "./components/PokemonDataGrid/PokemonDataGrid";
 import Layout from "./components/layout/Layout";
 import MyHeader from "./components/myHeader/myHeader";
 import Sidebar from "./components/sidebar/sidebar";
+import Modal from "./components/modal/modal"
 import Footer from "./components/footer/footer";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <div className="layout-main">
         <Sidebar className="left" />
         <PokemonDataGrid className="layout-datagrid" />
+        <Modal />
         <Sidebar className="right" />
       </div>
 

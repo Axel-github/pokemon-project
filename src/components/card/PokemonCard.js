@@ -1,27 +1,31 @@
-//компонент, который отрисовывает инфу про покемонов
-
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "./card.css";
 
 
+const PokemonCard = ({ pokemon, setPokemon, setOpen }) => {
 
-function PokemonCard(props) {
+  const [name] = useState(pokemon.name);
+  //const [weight] = useState(pokemon.weight);
+  const [spriteUrl] = useState(pokemon.spriteUrl);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const [name] = useState(props.pokemon.name);
-  const [spriteUrl] = useState(props.pokemon.spriteUrl);
+  const handleCloseModal = () => {
+    setOpen(true);
+    setPokemon(pokemon);
+  };
 
   return (
-
-    <div className="card">
-      <div className="card-body">
-        <img className="card-body-image" src={spriteUrl} alt='pokemon' />
+    
+      <div className="card" onClick={() => handleCloseModal()}>
+        <div className="card-body">
+          <img className="card-body-image" src={spriteUrl} alt='pokemon' />
+        </div>
+        <div className="card-footer">
+          <span className="card-footer-title">{name}</span>
+        </div>
       </div>
-      <div className="card-footer">
-        <span className="card-footer-title">{name}</span>
-      </div>
-    </div>
+    
   );
 }
 
 export default PokemonCard;
-

@@ -18,6 +18,7 @@ export async function getPokemonList(limit, offset) {
   for (let i = 0; i < pokemons.length; i++) {
     const slices = pokemons[i].url.split("/");
     const id = slices[slices.length - 2];
+    pokemons[i].id = id;
     // pokemons[i].spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
     pokemons[i].spriteUrl = getPokemonSprite(id, 'animated');
   }

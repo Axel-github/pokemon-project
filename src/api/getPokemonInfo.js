@@ -2,12 +2,6 @@ import axios from 'axios';
 
 
 export async function getPokemonInfo(name) {
-    // const params = {
-    //   limit,
-    //   offset
-    // }
-
-
 
     let config = {
         method: 'get',
