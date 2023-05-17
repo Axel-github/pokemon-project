@@ -1,6 +1,7 @@
 import axios from "axios";
 import getPokemonSprite from "../helpers/getPokemonSprite";
 export async function getPokemons(limit, offset) {
+  
   const cacheKey = `pokemons-${limit}-${offset}`;
   const cache = await caches.open('pokeapi-cache');
   const cachedResponse = await cache.match(cacheKey);
@@ -8,7 +9,9 @@ export async function getPokemons(limit, offset) {
   if (cachedResponse) {
     const pokemons = await cachedResponse.json();
     return pokemons;
-  }
+  } //Cоздает ключ кеша для хранения ответов API и пытается получить ранее закешированный ответ. Если такой ответ найден, он преобразуется в формат JSON и возвращается.
+
+
 
   let data = JSON.stringify({
     "query": "query samplePokeAPIquery($limit: Int, $offset: Int) {\n  results: pokemon_v2_pokemon(limit: $limit, offset: $offset) {\n    name\n    id\n    weight\n  }\n}\n",
