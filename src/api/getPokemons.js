@@ -1,7 +1,7 @@
 import axios from "axios";
 import getPokemonSprite from "../helpers/getPokemonSprite";
 export async function getPokemons(limit, offset) {
-  
+
   const cacheKey = `pokemons-${limit}-${offset}`;
   const cache = await caches.open('pokeapi-cache');
   const cachedResponse = await cache.match(cacheKey);
@@ -52,7 +52,7 @@ export async function getPokemons(limit, offset) {
   for (let i = 0; i < pokemons.length; i++) {
     pokemons[i].spriteUrl = getPokemonSprite(pokemons[i].id, 'animated');
   }
-  
+
   const cacheResponse = new Response(JSON.stringify(pokemons));
   await cache.put(cacheKey, cacheResponse.clone());
 
