@@ -2,14 +2,14 @@ import axios from "axios";
 import getPokemonSprite from "../helpers/getPokemonSprite";
 export async function getPokemons(limit, offset) {
 
-  const cacheKey = `pokemons-${limit}-${offset}`;
-  const cache = await caches.open('pokeapi-cache');
-  const cachedResponse = await cache.match(cacheKey);
+  // const cacheKey = `pokemons-${limit}-${offset}`;
+  // const cache = await caches.open('pokeapi-cache');
+  // const cachedResponse = await cache.match(cacheKey);
 
-  if (cachedResponse) {
-    const pokemons = await cachedResponse.json();
-    return pokemons;
-  } //Cоздает ключ кеша для хранения ответов API и пытается получить ранее закешированный ответ. Если такой ответ найден, он преобразуется в формат JSON и возвращается.
+  // if (cachedResponse) {
+  //   const pokemons = await cachedResponse.json();
+  //   return pokemons;
+  // } //Cоздает ключ кеша для хранения ответов API и пытается получить ранее закешированный ответ. Если такой ответ найден, он преобразуется в формат JSON и возвращается.
 
 
 
@@ -53,8 +53,8 @@ export async function getPokemons(limit, offset) {
     pokemons[i].spriteUrl = getPokemonSprite(pokemons[i].id, 'animated');
   }
 
-  const cacheResponse = new Response(JSON.stringify(pokemons));
-  await cache.put(cacheKey, cacheResponse.clone());
+  // const cacheResponse = new Response(JSON.stringify(pokemons));
+  // await cache.put(cacheKey, cacheResponse.clone());
 
   return pokemons;
 }
